@@ -1,4 +1,7 @@
+"use client";
+
 import Cursor from "./Cursor";
+import Spline from "@splinetool/react-spline";
 
 function BackGradient() {
   return (
@@ -25,15 +28,76 @@ function BackGradient() {
   );
 }
 
+function Snail() {
+  return (
+    <>
+      <div>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="138"
+          height="143"
+          viewBox="0 0 138 143"
+          fill="none"
+        >
+          <path
+            d="M47.1975 64.9834C37.6885 64.9834 26.8301 65.9101 17.828 62.2033C13.812 60.5497 6.84253 59.5251 6.84253 54.0427C6.84253 44.7582 12.5817 38.0961 19.3077 32.1613C28.9891 23.6189 42.9768 22.216 55.2685 26.2426C64.1446 29.1503 67.3749 36.0735 67.3749 44.8507C67.3749 61.1396 66.5678 77.3503 66.5678 93.6354C66.5678 101.896 67.5584 116.4 76.7462 119.463C85.5229 122.388 95.9549 122.508 105.129 122.287C114.824 122.054 122.176 112.797 128.625 106.549C135.603 99.7884 138.21 79.6632 133.736 70.5434C131.705 66.4022 126.048 61.9329 122.616 58.9749C116.872 54.023 109.09 49.822 101.452 49.6485C94.6485 49.4938 89.9352 48.8882 83.5618 52.4733C79.103 54.9814 76.0517 60.9023 73.4282 64.9834C69.4869 71.1142 69.6409 80.6043 70.7827 87.5821C71.7908 93.7425 73.2089 99.4375 78.2259 103.59C83.5427 107.99 91.321 107.37 97.8653 106.952C104.201 106.548 106.595 94.9455 106.878 90.1379C107.165 85.2645 103.711 82.1816 98.8518 81.9324C93.4946 81.6577 86.7453 79.1637 86.7453 86.775"
+            stroke="white"
+            stroke-width="2.4"
+            stroke-linecap="round"
+          />
+          <path
+            d="M18.142 64.9833C18.142 71.0301 18.0546 77.9819 15.2723 83.5466C12.5676 88.956 8.34088 93.1575 6.21483 98.8815C2.27114 109.499 3.78896 120.041 11.6852 127.937C29.0355 145.287 62.1315 145.153 81.9028 131.973"
+            stroke="white"
+            stroke-width="2.4"
+            stroke-linecap="round"
+          />
+          <path
+            d="M28.6342 39.1562C30.1603 39.1562 32.7853 38.5803 33.4767 39.9633"
+            stroke="white"
+            stroke-width="2.4"
+            stroke-linecap="round"
+          />
+          <path
+            d="M46.3904 39.9633H54.4614"
+            stroke="white"
+            stroke-width="2.4"
+            stroke-linecap="round"
+          />
+          <path
+            d="M29.4414 45.613C32.8646 45.613 36.9902 46.2776 39.9337 44.8059"
+            stroke="white"
+            stroke-width="2.4"
+            stroke-linecap="round"
+          />
+          <path
+            d="M35.8981 23.0142C35.8981 17.2244 37.1495 9.82755 32.6697 5.34772C28.0262 0.704225 19.2502 1.3647 14.1064 4.45095"
+            stroke="white"
+            stroke-width="2.4"
+            stroke-linecap="round"
+          />
+          <path
+            d="M28.6343 21.4C25.9198 18.0069 25.2779 12.9054 21.3704 10.28C17.7101 7.82074 10.7299 7.3576 6.6184 8.66579C4.18596 9.43975 3.09566 12.9345 2 14.9432"
+            stroke="white"
+            stroke-width="2.4"
+            stroke-linecap="round"
+          />
+        </svg>
+      </div>
+    </>
+  );
+}
+
 function NameGreeting() {
   return (
     <>
-      <div className="text-white z-1 absolute">
-        <div className="font-black text-[45px] ">Hello! I'm Jad Bendarkawi</div>
-        <div className="font-[200] text-[25px] ">
+      <div className="text-white z-1 absolute items-center">
+        <div className="font-black text-[45px] text-center">
+          Hello! I'm Jad Bendarkawi
+        </div>
+        <div className="font-[200] text-[25px] text-center">
           software engineer + ux + product
         </div>
-        <div className="font-[200] text-[25px] w-[623px]">
+        <div className="font-[200] text-[25px] w-[865px] text-center pt-[22px]">
           i'm a senior at Princeton University studying electrical & computer
           engineering with minors in technology & society and robotics.{" "}
         </div>
@@ -42,74 +106,40 @@ function NameGreeting() {
   );
 }
 
-function CursorYes() {
+function Navigation() {
   return (
-    <div className="fixed">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="64"
-        height="74"
-        viewBox="0 0 64 74"
-        fill="none"
-      >
-        <g filter="url(#filter0_d_27_2)">
-          <path
-            d="M13 12.9215C13 10.4573 15.8538 9.10407 17.7473 10.6704L49.6918 37.0956C51.7941 38.8346 50.5701 42.2627 47.8469 42.2626H31.6169C30.353 42.2626 29.1515 42.8144 28.3246 43.7746L18.0973 55.6498C16.3385 57.692 13 56.4424 13 53.7418L13 12.9215Z"
-            fill="white"
-          />
-          <path
-            d="M18.7034 9.51462C15.8213 7.13045 11.5 9.20194 11.5 12.9215L11.5 53.7418C11.5 57.8178 16.5574 59.7364 19.2339 56.6287L29.4611 44.7535C30.004 44.1231 30.791 43.7626 31.6169 43.7626H47.8469C51.9912 43.7626 53.8214 38.5649 50.6479 35.9398L18.7034 9.51462Z"
-            stroke="black"
-            stroke-width="3"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </g>
-        <defs>
-          <filter
-            id="filter0_d_27_2"
-            x="0"
-            y="0.991638"
-            width="63.7579"
-            height="72.6813"
-            filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
-          >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
-            <feColorMatrix
-              in="SourceAlpha"
-              type="matrix"
-              values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-              result="hardAlpha"
-            />
-            <feOffset dy="4" />
-            <feGaussianBlur stdDeviation="5" />
-            <feComposite in2="hardAlpha" operator="out" />
-            <feColorMatrix
-              type="matrix"
-              values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
-            />
-            <feBlend
-              mode="normal"
-              in2="BackgroundImageFix"
-              result="effect1_dropShadow_27_2"
-            />
-            <feBlend
-              mode="normal"
-              in="SourceGraphic"
-              in2="effect1_dropShadow_27_2"
-              result="shape"
-            />
-          </filter>
-        </defs>
-      </svg>
+    <>
+      <div className="text-white z-1">
+        <span className="p-5">projects</span>
+        <span className="p-5">about</span>
+        <span className="p-5">creative</span>
+        <span className="p-5">contact</span>
+      </div>
+    </>
+  );
+}
+
+function HomeRender() {
+  return (
+    <div className="z-0 absolute">
+      <Spline scene="https://prod.spline.design/BG1WuJRm89H8JEUh/scene.splinecode" />
     </div>
   );
 }
 export default function Home() {
   return (
     <>
-      <BackGradient /> <NameGreeting /> <Cursor />
+      <div className="absolute top-[80px] right-[174px]">
+        <Navigation />
+      </div>
+
+      <div className="absolute top-[172px] right-[653px] content-center	">
+        <Snail />
+      </div>
+
+      <div className="absolute mt-[339px] ml-[287px] mr-[288px]">
+        <NameGreeting />
+      </div>
     </>
   );
 }

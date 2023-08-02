@@ -7,23 +7,30 @@ const Cursor = () => {
   const { x, y } = useMousePosition();
   return (
     <>
-      <div style={{ left: `${x}px`, top: `${y}px`, position: "fixed" }}>
+      <div
+        style={{
+          left: `${x}px`,
+          top: `${y}px`,
+          position: "fixed",
+          zIndex: 999,
+        }}
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          width="64"
-          height="74"
-          viewBox="0 0 64 74"
+          width="38"
+          height="43"
+          viewBox="0 0 38 43"
           fill="none"
         >
           <g filter="url(#filter0_d_27_2)">
             <path
-              d="M13 12.9215C13 10.4573 15.8538 9.10407 17.7473 10.6704L49.6918 37.0956C51.7941 38.8346 50.5701 42.2627 47.8469 42.2626H31.6169C30.353 42.2626 29.1515 42.8144 28.3246 43.7746L18.0973 55.6498C16.3385 57.692 13 56.4424 13 53.7418L13 12.9215Z"
-              fill="white"
+              d="M8 7.6828C8 6.26341 9.64379 5.48394 10.7345 6.38616L29.1345 21.607C30.3454 22.6087 29.6404 24.5833 28.0718 24.5833H18.7233C17.9953 24.5833 17.3033 24.9011 16.8269 25.4542L10.936 32.2943C9.92299 33.4706 8 32.7508 8 31.1953L8 7.6828Z"
+              fill="#6372FF"
             />
             <path
-              d="M18.7034 9.51462C15.8213 7.13045 11.5 9.20194 11.5 12.9215L11.5 53.7418C11.5 57.8178 16.5574 59.7364 19.2339 56.6287L29.4611 44.7535C30.004 44.1231 30.791 43.7626 31.6169 43.7626H47.8469C51.9912 43.7626 53.8214 38.5649 50.6479 35.9398L18.7034 9.51462Z"
-              stroke="black"
-              stroke-width="3"
+              d="M11.2852 5.72042C9.62505 4.34714 7.136 5.54032 7.136 7.6828L7.136 31.1953C7.136 33.5431 10.0491 34.6482 11.5907 32.8581L17.4816 26.018C17.7943 25.6549 18.2476 25.4473 18.7233 25.4473H28.0718C30.4589 25.4473 31.5131 22.4534 29.6852 20.9413L11.2852 5.72042Z"
+              stroke="white"
+              stroke-width="1.728"
               stroke-linecap="round"
               stroke-linejoin="round"
             />
@@ -31,10 +38,10 @@ const Cursor = () => {
           <defs>
             <filter
               id="filter0_d_27_2"
-              x="0"
-              y="0.991638"
-              width="63.7579"
-              height="72.6813"
+              x="0.512005"
+              y="0.811182"
+              width="36.7245"
+              height="41.8644"
               filterUnits="userSpaceOnUse"
               color-interpolation-filters="sRGB"
             >
@@ -45,8 +52,8 @@ const Cursor = () => {
                 values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
                 result="hardAlpha"
               />
-              <feOffset dy="4" />
-              <feGaussianBlur stdDeviation="5" />
+              <feOffset dy="2.304" />
+              <feGaussianBlur stdDeviation="2.88" />
               <feComposite in2="hardAlpha" operator="out" />
               <feColorMatrix
                 type="matrix"
