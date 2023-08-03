@@ -98,8 +98,10 @@ function NameGreeting() {
           software engineer + ux + product
         </div>
         <div className="font-[200] text-[25px] w-[865px] text-center pt-[22px]">
-          i'm a senior at Princeton University studying electrical & computer
-          engineering with minors in technology & society and robotics.{" "}
+          i’m a senior at Princeton University studying electrical & computer
+          engineering with minors in technology & society and robotics. i’m
+          excited about building valuable digital experiences that bring people
+          together.{" "}
         </div>
       </div>
     </>
@@ -122,23 +124,91 @@ function Navigation() {
 function HomeRender() {
   return (
     <div className="z-0 absolute">
-      <Spline scene="https://prod.spline.design/BG1WuJRm89H8JEUh/scene.splinecode" />
+      <Spline scene="https://prod.spline.design/TrFWVXHApQY9csqU/scene.splinecode" />
     </div>
   );
 }
+
+interface SectionHeaderProps {
+  title: string;
+}
+
+function SectionHeader({ title }: SectionHeaderProps) {
+  return (
+    <>
+      <div className="text-white z-1 font-[200] text-[30px] ">{title}</div>
+    </>
+  );
+}
+
+interface ProjectCardProps {
+  title?: string;
+  description?: string;
+  onNavigate?: string;
+  onHoverColor?: string;
+}
+
+function ProjectCard({ title, description, onNavigate }: ProjectCardProps) {
+  return (
+    <>
+      <div className="bg-white w-[550px] h-[209px] border-black rounded-[10px]">
+        <div className="text-black z-1 font-bold text-[30px] pt-7 pl-7">
+          {title}
+        </div>
+        <div className="text-black z-1 text-[15px] pl-7 pr-7">
+          {description}
+        </div>
+      </div>
+    </>
+  );
+}
+
 export default function Home() {
   return (
     <>
+      <Cursor />
       <div className="absolute top-[80px] right-[174px]">
         <Navigation />
       </div>
 
-      <div className="absolute top-[172px] right-[653px] content-center	">
+      <div className="flex items-center justify-center pt-[172px]">
         <Snail />
       </div>
 
-      <div className="absolute mt-[339px] ml-[287px] mr-[288px]">
+      <div className="flex items-center justify-center pt-[120px]">
         <NameGreeting />
+      </div>
+
+      <div className="pt-[175px] pl-[174px] pb-[20px]">
+        <SectionHeader title="featured projects" />
+      </div>
+
+      <div className="flex items-center justify-center">
+        <div className="grid grid-cols-2 gap-[10px] lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1">
+          <ProjectCard
+            title={"Microsoft Loop"}
+            description={
+              "digital expressions + homepage experience for the Microsoft Loop app, designed to enable live collaboration askdjasd"
+            }
+          />
+          <ProjectCard
+            title={"TigerFocus"}
+            description={
+              "a pomodoro inspired self-study tool that enables Princeton students to track their work, time study sessions, and manage courses all in one place"
+            }
+          />
+          <ProjectCard
+            title={"halalify"}
+            description={
+              "a lightweight chrome extension built to help Muslims make informed online grocery shopping decisions"
+            }
+          />
+          <ProjectCard title={"coming soon"} />
+        </div>
+      </div>
+
+      <div className="pt-[50px] pl-[174px] pb-[20px]">
+        <SectionHeader title="about me" />
       </div>
     </>
   );

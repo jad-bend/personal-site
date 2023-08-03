@@ -17,31 +17,31 @@ const Cursor = () => {
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          width="38"
-          height="43"
-          viewBox="0 0 38 43"
+          width="68"
+          height="78"
+          viewBox="0 0 68 78"
           fill="none"
         >
-          <g filter="url(#filter0_d_27_2)">
+          <g filter="url(#filter0_d_10_14)">
             <path
-              d="M8 7.6828C8 6.26341 9.64379 5.48394 10.7345 6.38616L29.1345 21.607C30.3454 22.6087 29.6404 24.5833 28.0718 24.5833H18.7233C17.9953 24.5833 17.3033 24.9011 16.8269 25.4542L10.936 32.2943C9.92299 33.4706 8 32.7508 8 31.1953L8 7.6828Z"
-              fill="#6372FF"
+              d="M15 14.9215C15 12.4573 17.8538 11.1041 19.7473 12.6704L51.6918 39.0956C53.7941 40.8346 52.5701 44.2627 49.8469 44.2626H33.6169C32.353 44.2626 31.1515 44.8144 30.3246 45.7746L20.0973 57.6498C18.3385 59.692 15 58.4424 15 55.7418L15 14.9215Z"
+              fill="#3B5661"
             />
             <path
-              d="M11.2852 5.72042C9.62505 4.34714 7.136 5.54032 7.136 7.6828L7.136 31.1953C7.136 33.5431 10.0491 34.6482 11.5907 32.8581L17.4816 26.018C17.7943 25.6549 18.2476 25.4473 18.7233 25.4473H28.0718C30.4589 25.4473 31.5131 22.4534 29.6852 20.9413L11.2852 5.72042Z"
+              d="M21.3408 10.7441C17.7996 7.81471 12.5 10.365 12.5 14.9215L12.5 55.7418C12.5 60.7348 18.7034 63.0993 21.9916 59.2813L32.2189 47.4061C32.5724 46.9956 33.083 46.7626 33.6169 46.7626H49.8469C54.9386 46.7626 57.1729 40.3851 53.2853 37.1692L21.3408 10.7441Z"
               stroke="white"
-              stroke-width="1.728"
+              stroke-width="5"
               stroke-linecap="round"
               stroke-linejoin="round"
             />
           </g>
           <defs>
             <filter
-              id="filter0_d_27_2"
-              x="0.512005"
-              y="0.811182"
-              width="36.7245"
-              height="41.8644"
+              id="filter0_d_10_14"
+              x="0"
+              y="0.986053"
+              width="67.7598"
+              height="76.693"
               filterUnits="userSpaceOnUse"
               color-interpolation-filters="sRGB"
             >
@@ -52,8 +52,8 @@ const Cursor = () => {
                 values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
                 result="hardAlpha"
               />
-              <feOffset dy="2.304" />
-              <feGaussianBlur stdDeviation="2.88" />
+              <feOffset dy="4" />
+              <feGaussianBlur stdDeviation="5" />
               <feComposite in2="hardAlpha" operator="out" />
               <feColorMatrix
                 type="matrix"
@@ -62,12 +62,12 @@ const Cursor = () => {
               <feBlend
                 mode="normal"
                 in2="BackgroundImageFix"
-                result="effect1_dropShadow_27_2"
+                result="effect1_dropShadow_10_14"
               />
               <feBlend
                 mode="normal"
                 in="SourceGraphic"
-                in2="effect1_dropShadow_27_2"
+                in2="effect1_dropShadow_10_14"
                 result="shape"
               />
             </filter>
