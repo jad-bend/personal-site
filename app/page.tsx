@@ -31,7 +31,7 @@ function BackGradient() {
 function Snail() {
   return (
     <>
-      <div>
+      <div className="hover:animate-spin">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="138"
@@ -111,7 +111,7 @@ function NameGreeting() {
 function Navigation() {
   return (
     <>
-      <div className="text-white z-1">
+      <div className="text-white z-1 font-[200] text-[20px]">
         <span className="p-5">projects</span>
         <span className="p-5">about</span>
         <span className="p-5">creative</span>
@@ -145,19 +145,18 @@ interface ProjectCardProps {
   title?: string;
   description?: string;
   onNavigate?: string;
-  onHoverColor?: string;
+  bgHoverColor?: string;
 }
 
-function ProjectCard({ title, description, onNavigate }: ProjectCardProps) {
+function ProjectCard({ title, description, bgHoverColor }: ProjectCardProps) {
+  const projectCardStyles = `bg-white w-[550px] h-[209px] border-2 border-black rounded-[10px] transition-all duration-300 ease-in hover:cursor-pointer hover:w-100px  ${bgHoverColor}`;
   return (
     <>
-      <div className="bg-white w-[550px] h-[209px] border-black rounded-[10px]">
-        <div className="text-black z-1 font-bold text-[30px] pt-7 pl-7">
+      <div className={projectCardStyles}>
+        <div className="text-black  font-bold text-[30px] pt-7 pl-7">
           {title}
         </div>
-        <div className="text-black z-1 text-[15px] pl-7 pr-7">
-          {description}
-        </div>
+        <div className="text-black text-[15px] pl-7 pr-7 ">{description}</div>
       </div>
     </>
   );
@@ -166,7 +165,6 @@ function ProjectCard({ title, description, onNavigate }: ProjectCardProps) {
 export default function Home() {
   return (
     <>
-      <Cursor />
       <div className="absolute top-[80px] right-[174px]">
         <Navigation />
       </div>
@@ -190,20 +188,29 @@ export default function Home() {
             description={
               "digital expressions + homepage experience for the Microsoft Loop app, designed to enable live collaboration askdjasd"
             }
+            bgHoverColor={"hover:bg-violet-400"}
           />
           <ProjectCard
             title={"TigerFocus"}
             description={
               "a pomodoro inspired self-study tool that enables Princeton students to track their work, time study sessions, and manage courses all in one place"
             }
+            bgHoverColor={"hover:bg-orange-400"}
           />
           <ProjectCard
             title={"halalify"}
             description={
               "a lightweight chrome extension built to help Muslims make informed online grocery shopping decisions"
             }
+            bgHoverColor={`hover:bg-emerald-400`}
           />
-          <ProjectCard title={"coming soon"} />
+          <ProjectCard
+            title={"Robotic Art Installation"}
+            description={
+              "a project advised by the Self-Organizing Swarms & Robotics (SSR) Lab led by Radhika Nagpal "
+            }
+            bgHoverColor={`hover:bg-blue-400`}
+          />
         </div>
       </div>
 
