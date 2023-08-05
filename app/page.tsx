@@ -97,7 +97,7 @@ function NameGreeting() {
         <div className="font-[200] text-[25px] text-center">
           software engineer + ux + product
         </div>
-        <div className="text-black font-[200] text-[25px] w-[963px] text-center pt-[22px]">
+        <div className="font-[200] text-[25px] w-[963px] text-center pt-[22px]">
           i’m a senior at <b className="font-[600]">Princeton University</b>{" "}
           studying
           <b className="font-[600]"> electrical & computer engineering</b> with
@@ -113,7 +113,7 @@ function NameGreeting() {
 function Navigation() {
   return (
     <>
-      <div className="text-black z-1 font-[200] text-[20px]">
+      <div className="text-white z-1 font-[200] text-[20px]">
         <span className="p-5">projects</span>
         <span className="p-5">about</span>
         <span className="p-5">creative</span>
