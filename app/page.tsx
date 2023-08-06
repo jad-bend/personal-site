@@ -4,10 +4,70 @@ import { useRef } from "react";
 import Cursor from "./Cursor";
 import Spline from "@splinetool/react-spline";
 
+function nav() {
+  return (
+    <nav
+      class="bg-white fixed sm:grid sm:grid-rows-1 sm:items-center sm:justify-items-stretch sm:h-12 top-0 w-screen"
+      data-headlessui-state=""
+    >
+      <div>
+        <div class="relative justify-between">
+          <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+            <button
+              class="inline-flex items-center justify-center rounded-md p-2 mt-8 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+              id="headlessui-disclosure-button-:Rl6:"
+              type="button"
+              aria-expanded="false"
+              data-headlessui-state=""
+            >
+              <span class="sr-only">Open main menu</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                aria-hidden="true"
+                class="block h-6 w-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                ></path>
+              </svg>
+            </button>
+          </div>
+          <div class="grid grid-cols-2 sm:items-center sm:justify-between">
+            <div class="hidden sm:ml-2 sm:block">
+              <button
+                class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium"
+                aria-current="page"
+              >
+                Home
+              </button>
+            </div>
+            <div class="hidden justify-self-end sm:mr-2 sm:block">
+              <button class="text-black hover:bg-gray-900 hover:text-white rounded-md px-3 py-2 text-sm font-medium">
+                About
+              </button>
+              <button class="text-black hover:bg-gray-900 hover:text-white rounded-md px-3 py-2 text-sm font-medium">
+                Projects
+              </button>
+              <button class="text-black hover:bg-gray-900 hover:text-white rounded-md px-3 py-2 text-sm font-medium">
+                Resume
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  );
+}
 function Snail() {
   return (
     <>
-      <div className="hover:animate-spin">
+      <div className="hover:animate-bounce">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="138"
@@ -82,9 +142,42 @@ function NameGreeting() {
           valuable digital experiences that bring people together.{" "}
         </div>
         <div className="justify-center flex mt-[25px]">
-          <button className="bg-white h-[50px] w-[50px] rounded-[30px] mr-3"></button>
-          <button className="bg-white h-[50px] w-[50px] rounded-[30px] mr-3"></button>
-          <button className="bg-white h-[50px] w-[50px] rounded-[30px] mr-3"></button>
+          <a
+            className="group bg-transparent h-[50px] w-[50px] rounded-[20px] mr-3 justify-center flex pt-[12px] transition ease-in-out duration-300 hover:bg-white"
+            href="https://www.linkedin.com/in/jadbendarkawi/"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-5 w-5 fill-white transition ease-in-out duration-300 group-hover:fill-[#161616]"
+              viewBox="0 0 24 24"
+            >
+              <path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" />
+            </svg>
+          </a>
+          <a
+            className="group bg-transparent h-[50px] w-[50px] rounded-[20px] mr-3 justify-center flex pt-[8px] transition ease-in-out duration-300 hover:bg-white"
+            href="https://github.com/jad-bend"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-8 w-8 fill-white transition ease-in-out duration-300 group-hover:fill-[#161616]"
+              viewBox="0 0 24 24"
+            >
+              <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+            </svg>
+          </a>
+          <a
+            className="group bg-transparent h-[50px] w-[50px] rounded-[20px] mr-3 justify-center flex pt-[10px] transition ease-in-out duration-300 hover:bg-white"
+            href="mailto:jadb@princeton.edu"
+          >
+            <svg
+              viewBox="0 0 8 6"
+              className="h-7 w-7 rounded-[5px] fill-white transition ease-in-out duration-300 group-hover:fill-[#161616]"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="m0 0h8v6h-8zm.75 .75v4.5h6.5v-4.5zM0 0l4 3 4-3v1l-4 3-4-3z" />
+            </svg>
+          </a>
         </div>
       </div>
     </>
@@ -126,7 +219,7 @@ interface SectionHeaderProps {
 function SectionHeader({ title }: SectionHeaderProps) {
   return (
     <>
-      <div className="text-white text-[30px] font-black">{title}</div>
+      <div className="text-white text-[30px] font-[200] uppercase">{title}</div>
     </>
   );
 }
@@ -138,7 +231,7 @@ function SkillChip({ text }: SkillChipProps) {
   return (
     <>
       <div
-        className="justify-center align-middle rounded-[20px] text-black border-[1px] border-black pr-[14px] pl-[14px] pt-[5px] pb-[5px] uppercase transition ease-in-out duration-200 bg-white"
+        className="justify-center align-middle rounded-[20px] text-white border-[1px] border-white pr-[14px] pl-[14px] pt-[5px] pb-[5px] uppercase transition ease-in-out duration-200 group-hover:bg-white group-hover:text-black group-hover:border-black"
         style={{ width: "fit-content" }}
       >
         {text}
@@ -161,21 +254,21 @@ function ProjectCard({
   bgHoverColor,
   skills,
 }: ProjectCardProps) {
-  const projectCardStyles = ` group bg-white w-[550px] h-[209px] border-2 border-black rounded-[10px] transition-all duration-200 ease-in no-underline hover:cursor-pointer hover:w-100px  ${bgHoverColor} `;
+  const projectCardStyles = `group bg-[#242424] w-[550px] h-[209px] rounded-[10px] transition-all duration-200 ease-in no-underline hover:cursor-pointer hover:w-100px  ${bgHoverColor} `;
 
   return (
     <>
       <div className={projectCardStyles}>
         <div className="pl-7">
           <div
-            className="text-black font-bold text-[30px] mb-[5px] pt-7 bg-left-bottom bg-gradient-to-r from-black to-black bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out"
+            className="text-white font-black text-[30px] mb-[5px] pt-7 bg-left-bottom bg-gradient-to-r from-black to-black bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out"
             style={{ width: "fit-content" }}
           >
             {title}
           </div>
         </div>
 
-        <div className="text-black text-[15px] pl-7 pr-7 pb-[14px] ">
+        <div className="text-white text-[15px] pl-7 pr-7 pb-[14px] group-hover:text-black ">
           {description}
         </div>
 
@@ -198,15 +291,47 @@ export default function Home() {
   const handleProjectsClick = () => {
     projectsRef.current?.scrollIntoView({ behavior: "smooth" });
   };
+
+  const aboutRef = useRef<null | HTMLDivElement>(null);
+  const handleAboutClick = () => {
+    aboutRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <>
       <div className="flex justify-center">
         <nav
-          className=" bg-white fixed mt-[20px] w-4/6 top-0 z-10 text-black font-[200] text-[20px] border-black border-2 bg-opacity-80 rounded-[50px] p-3 shadow-lg "
+          className="bg-[#161616] fixed sm:grid sm:grid-rows-1 sm:items-center sm:justify-items-stretch sm:h-12 top-0 w-screen z-10"
           data-headlessui-state=""
         >
           <div>
             <div className="relative justify-between">
+              <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
+                <button
+                  className="inline-flex items-center justify-center rounded-md p-2 mt-8 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                  id="headlessui-disclosure-button-:Rl6:"
+                  type="button"
+                  aria-expanded="false"
+                  data-headlessui-state=""
+                >
+                  <span className="sr-only">Open main menu</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                    className="block h-6 w-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                    ></path>
+                  </svg>
+                </button>
+              </div>
               <div className="grid grid-cols-2 sm:items-center sm:justify-between">
                 <div className=" sm:ml-2 sm:block">
                   <button
@@ -220,17 +345,20 @@ export default function Home() {
                 <div className=" justify-self-end sm:mr-2 sm:block">
                   <button
                     onClick={handleProjectsClick}
-                    className="text-black hover:bg-[#21444f] hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                    className="text-white hover:bg-[#21444f] hover:text-white rounded-md px-3 py-2 text-sm font-medium"
                   >
                     projects
                   </button>
-                  <button className="text-black hover:bg-[#21444f] hover:text-white rounded-md px-3 py-2 text-sm font-medium">
+                  <button
+                    onClick={handleAboutClick}
+                    className="text-white hover:bg-[#21444f] hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                  >
                     about
                   </button>
-                  <button className="text-black hover:bg-[#21444f] hover:text-white rounded-md px-3 py-2 text-sm font-medium">
+                  <button className="text-white hover:bg-[#21444f] hover:text-white rounded-md px-3 py-2 text-sm font-medium">
                     creative
                   </button>
-                  <button className="text-black hover:bg-[#21444f] hover:text-white rounded-md px-3 py-2 text-sm font-medium">
+                  <button className="text-white hover:bg-[#21444f] hover:text-white rounded-md px-3 py-2 text-sm font-medium">
                     contact
                   </button>
                 </div>
@@ -290,6 +418,10 @@ export default function Home() {
             skills={["C", "psoc creator", "circuit design", "pid control"]}
           />
         </div>
+      </div>
+
+      <div ref={aboutRef} className="pt-[100px] pb-[20px] justify-center flex ">
+        <SectionHeader title="about me" />
       </div>
     </>
   );
