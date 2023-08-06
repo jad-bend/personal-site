@@ -7,20 +7,20 @@ import Spline from "@splinetool/react-spline";
 function nav() {
   return (
     <nav
-      class="bg-white fixed sm:grid sm:grid-rows-1 sm:items-center sm:justify-items-stretch sm:h-12 top-0 w-screen"
+      className="bg-white fixed sm:grid sm:grid-rows-1 sm:items-center sm:justify-items-stretch sm:h-12 top-0 w-screen"
       data-headlessui-state=""
     >
       <div>
-        <div class="relative justify-between">
-          <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+        <div className="relative justify-between">
+          <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
             <button
-              class="inline-flex items-center justify-center rounded-md p-2 mt-8 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+              className="inline-flex items-center justify-center rounded-md p-2 mt-8 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
               id="headlessui-disclosure-button-:Rl6:"
               type="button"
               aria-expanded="false"
               data-headlessui-state=""
             >
-              <span class="sr-only">Open main menu</span>
+              <span className="sr-only">Open main menu</span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -28,7 +28,7 @@ function nav() {
                 stroke-width="1.5"
                 stroke="currentColor"
                 aria-hidden="true"
-                class="block h-6 w-6"
+                className="block h-6 w-6"
               >
                 <path
                   stroke-linecap="round"
@@ -38,23 +38,23 @@ function nav() {
               </svg>
             </button>
           </div>
-          <div class="grid grid-cols-2 sm:items-center sm:justify-between">
-            <div class="hidden sm:ml-2 sm:block">
+          <div className="grid grid-cols-2 sm:items-center sm:justify-between">
+            <div className="hidden sm:ml-2 sm:block">
               <button
-                class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium"
+                className="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium"
                 aria-current="page"
               >
                 Home
               </button>
             </div>
-            <div class="hidden justify-self-end sm:mr-2 sm:block">
-              <button class="text-black hover:bg-gray-900 hover:text-white rounded-md px-3 py-2 text-sm font-medium">
+            <div className="hidden justify-self-end sm:mr-2 sm:block">
+              <button className="text-black hover:bg-gray-900 hover:text-white rounded-md px-3 py-2 text-sm font-medium">
                 About
               </button>
-              <button class="text-black hover:bg-gray-900 hover:text-white rounded-md px-3 py-2 text-sm font-medium">
+              <button className="text-black hover:bg-gray-900 hover:text-white rounded-md px-3 py-2 text-sm font-medium">
                 Projects
               </button>
-              <button class="text-black hover:bg-gray-900 hover:text-white rounded-md px-3 py-2 text-sm font-medium">
+              <button className="text-black hover:bg-gray-900 hover:text-white rounded-md px-3 py-2 text-sm font-medium">
                 Resume
               </button>
             </div>
@@ -64,6 +64,7 @@ function nav() {
     </nav>
   );
 }
+
 function Snail() {
   return (
     <>
