@@ -1,32 +1,8 @@
 "use client";
 
+import { useRef } from "react";
 import Cursor from "./Cursor";
 import Spline from "@splinetool/react-spline";
-
-function BackGradient() {
-  return (
-    <>
-      <div className="blur-[200px] absolute z-0">
-        <div className="left-[225.39px] top-[-104px] w-[521.739px] h-[310px] flex-shrink-0 rounded-[521.739px] bg-blue-400 absolute" />
-        <div className="left-[549.91px] top-[29px] w-[521.739px] h-[310px] flex-shrink-0 rounded-[521.739px] bg-red-400 absolute" />
-        <div className="left-[810.78px] top-[51px] w-[521.739px] h-[310px] flex-shrink-0 rounded-[521.739px] bg-purple-400 absolute" />
-
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="1440"
-          height="496"
-          viewBox="0 0 1440 496"
-          fill="none"
-        >
-          <path
-            d="M0 0H246.783C1007.48 647.5 974.02 95.6876 1440 157V472C1440 472 828.522 559 822.783 400.5C817.043 242 613.044 447 363.131 314.5C113.218 182 0 0 0 0Z"
-            fill="#BA63FF"
-          />
-        </svg>
-      </div>
-    </>
-  );
-}
 
 function Snail() {
   return (
@@ -90,8 +66,8 @@ function Snail() {
 function NameGreeting() {
   return (
     <>
-      <div className="text-white z-1 absolute items-center">
-        <div className="font-black text-[45px] text-center">
+      <div className="text-white absolute items-center">
+        <div className="font-black text-center text-[45px] ">
           Hello! I'm Jad Bendarkawi
         </div>
         <div className="font-[200] text-[25px] text-center">
@@ -105,6 +81,11 @@ function NameGreeting() {
           <b className="font-[600]"> robotics</b>. i’m excited about building
           valuable digital experiences that bring people together.{" "}
         </div>
+        <div className="justify-center flex mt-[25px]">
+          <button className="bg-white h-[50px] w-[50px] rounded-[30px] mr-3"></button>
+          <button className="bg-white h-[50px] w-[50px] rounded-[30px] mr-3"></button>
+          <button className="bg-white h-[50px] w-[50px] rounded-[30px] mr-3"></button>
+        </div>
       </div>
     </>
   );
@@ -113,7 +94,14 @@ function NameGreeting() {
 function Navigation() {
   return (
     <>
-      <div className="text-white z-1 font-[200] text-[20px]">
+      <div
+        className="text-black z-1 font-[200] text-[20px] border-black border-2 bg-white bg-opacity-50 rounded-[50px] p-3 shadow-lg"
+        style={{ width: "fit-content" }}
+      >
+        <span className="p-5">resume</span>
+        <span className="p-5">linkedin</span>
+        <span className="p-5">github</span>
+
         <span className="p-5">projects</span>
         <span className="p-5">about</span>
         <span className="p-5">creative</span>
@@ -138,7 +126,7 @@ interface SectionHeaderProps {
 function SectionHeader({ title }: SectionHeaderProps) {
   return (
     <>
-      <div className="text-white z-1 text-[30px] font-black">{title}</div>
+      <div className="text-white text-[30px] font-black">{title}</div>
     </>
   );
 }
@@ -150,7 +138,7 @@ function SkillChip({ text }: SkillChipProps) {
   return (
     <>
       <div
-        className="justify-center align-middle rounded-[20px] text-black border-[1px] border-black pr-[14px] pl-[14px] pt-[5px] pb-[5px] uppercase transition ease-in-out duration-200 group-hover:bg-white"
+        className="justify-center align-middle rounded-[20px] text-black border-[1px] border-black pr-[14px] pl-[14px] pt-[5px] pb-[5px] uppercase transition ease-in-out duration-200 bg-white"
         style={{ width: "fit-content" }}
       >
         {text}
@@ -202,25 +190,72 @@ function ProjectCard({
 }
 
 export default function Home() {
+  const homeRef = useRef<null | HTMLDivElement>(null);
+  const handleHomeClick = () => {
+    homeRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+  const projectsRef = useRef<null | HTMLDivElement>(null);
+  const handleProjectsClick = () => {
+    projectsRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
   return (
     <>
-      <div className="absolute top-[80px] right-[174px]">
-        <Navigation />
+      <div className="flex justify-center">
+        <nav
+          className=" bg-white fixed mt-[20px] w-4/6 top-0 z-10 text-black font-[200] text-[20px] border-black border-2 bg-opacity-80 rounded-[50px] p-3 shadow-lg "
+          data-headlessui-state=""
+        >
+          <div>
+            <div className="relative justify-between">
+              <div className="grid grid-cols-2 sm:items-center sm:justify-between">
+                <div className=" sm:ml-2 sm:block">
+                  <button
+                    onClick={handleHomeClick}
+                    className="bg-[#21444f] text-white rounded-md px-3 py-2 text-sm font-medium"
+                    aria-current="page"
+                  >
+                    home
+                  </button>
+                </div>
+                <div className=" justify-self-end sm:mr-2 sm:block">
+                  <button
+                    onClick={handleProjectsClick}
+                    className="text-black hover:bg-[#21444f] hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                  >
+                    projects
+                  </button>
+                  <button className="text-black hover:bg-[#21444f] hover:text-white rounded-md px-3 py-2 text-sm font-medium">
+                    about
+                  </button>
+                  <button className="text-black hover:bg-[#21444f] hover:text-white rounded-md px-3 py-2 text-sm font-medium">
+                    creative
+                  </button>
+                  <button className="text-black hover:bg-[#21444f] hover:text-white rounded-md px-3 py-2 text-sm font-medium">
+                    contact
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
       </div>
 
-      <div className="flex items-center justify-center pt-[172px]">
+      <div
+        ref={homeRef}
+        className="flex items-center justify-center pt-[172px]"
+      >
         <Snail />
       </div>
 
-      <div className="flex items-center justify-center pt-[120px]">
+      <div className="flex items-center justify-center pt-[172px]">
         <NameGreeting />
       </div>
 
-      <div className="pt-[175px] pb-[20px] justify-center items-center flex">
+      <div className="pt-[290px] pb-[20px] justify-center flex ">
         <SectionHeader title="featured projects" />
       </div>
 
-      <div className="flex items-center justify-center">
+      <div ref={projectsRef} className="flex items-center justify-center">
         <div className="grid gap-[10px] lg:grid-cols-2 md:grid-cols-1 ">
           <ProjectCard
             title={"Microsoft Loop"}
@@ -255,10 +290,6 @@ export default function Home() {
             skills={["C", "psoc creator", "circuit design", "pid control"]}
           />
         </div>
-      </div>
-
-      <div className="pt-[50px] pl-[174px] pb-[20px]">
-        <SectionHeader title="about me" />
       </div>
     </>
   );
