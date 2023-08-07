@@ -293,9 +293,9 @@ export default function Home() {
     projectsRef.current?.scrollIntoView({ behavior: "smooth" });
   };
 
-  const aboutRef = useRef<null | HTMLDivElement>(null);
-  const handleAboutClick = () => {
-    aboutRef.current?.scrollIntoView({ behavior: "smooth" });
+  const creativeRef = useRef<null | HTMLDivElement>(null);
+  const handleCreativeClick = () => {
+    creativeRef.current?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -337,13 +337,13 @@ export default function Home() {
                 <div className=" sm:ml-2 sm:block">
                   <button
                     onClick={handleHomeClick}
-                    className="bg-[#21444f] text-white rounded-md px-3 py-2 text-sm font-medium"
+                    className="hidden sm:ml-2 sm:block bg-[#21444f] text-white rounded-md px-3 py-2 text-sm font-medium"
                     aria-current="page"
                   >
                     home
                   </button>
                 </div>
-                <div className=" justify-self-end sm:mr-2 sm:block">
+                <div className="hidden justify-self-end sm:mr-2 sm:block">
                   <button
                     onClick={handleProjectsClick}
                     className="text-white hover:bg-[#21444f] hover:text-white rounded-md px-3 py-2 text-sm font-medium"
@@ -351,13 +351,13 @@ export default function Home() {
                     projects
                   </button>
                   <button
-                    onClick={handleAboutClick}
+                    onClick={handleCreativeClick}
                     className="text-white hover:bg-[#21444f] hover:text-white rounded-md px-3 py-2 text-sm font-medium"
                   >
-                    about
+                    creative
                   </button>
                   <button className="text-white hover:bg-[#21444f] hover:text-white rounded-md px-3 py-2 text-sm font-medium">
-                    creative
+                    resume
                   </button>
                   <button className="text-white hover:bg-[#21444f] hover:text-white rounded-md px-3 py-2 text-sm font-medium">
                     contact
@@ -421,8 +421,11 @@ export default function Home() {
         </div>
       </div>
 
-      <div ref={aboutRef} className="pt-[100px] pb-[20px] justify-center flex ">
-        <SectionHeader title="about me" />
+      <div
+        ref={creativeRef}
+        className="pt-[100px] pb-[20px] justify-center flex "
+      >
+        <SectionHeader title="creative stuff" />
       </div>
     </>
   );
