@@ -8,6 +8,7 @@ const Cursor = () => {
   return (
     <>
       <div
+        className="transition-all ease-in-out "
         style={{
           left: `${x}px`,
           top: `${y}px`,
