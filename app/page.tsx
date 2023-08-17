@@ -9,11 +9,9 @@ import Cursor from "./Cursor";
 function Snail() {
   return (
     <>
-      <div className="hover:animate-bounce">
+      <div className="hover:animate-bounce lg:w-[138px] lg:h-[143px]">
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          width="138"
-          height="143"
           viewBox="0 0 138 143"
           fill="none"
         >
@@ -68,14 +66,14 @@ function Snail() {
 function NameGreeting() {
   return (
     <>
-      <div className="text-white absolute items-center">
+      <div className="text-[#f8f3f1] absolute items-center">
         <div className="font-black text-center text-[45px] ">
           Hello! I'm Jad Bendarkawi
         </div>
         <div className="font-[200] text-[25px] text-center">
           software engineer + ux + product
         </div>
-        <div className="font-[200] text-[25px] w-[963px] text-center pt-[22px]">
+        <div className="font-[200] text-[25px] lg:w-[963px] text-center pt-[22px] text-[#f8f3f1]">
           i’m a senior at <b className="font-[600]">Princeton University</b>{" "}
           studying
           <b className="font-[600]"> electrical & computer engineering</b> with
@@ -184,7 +182,7 @@ interface SectionHeaderProps {
 function SectionHeader({ title }: SectionHeaderProps) {
   return (
     <>
-      <div className="text-[#161616] text-[30px] font-black lowercase">
+      <div className="text-[#f8f3f1] text-[30px] font-black lowercase">
         {title}
       </div>
     </>
@@ -221,7 +219,7 @@ function ProjectCard({
   bgHoverColor,
   skills,
 }: ProjectCardProps) {
-  const projectCardStyles = `border-[2px] border-black group bg-[#242424] w-[550px] h-[209px] rounded-[10px] transition-all duration-200 ease-in no-underline hover:cursor-pointer hover:w-100px ${bgHoverColor} `;
+  const projectCardStyles = `group bg-[#242424] w-[550px] h-[209px] rounded-[10px] transition-all duration-200 ease-in no-underline hover:cursor-pointer hover:w-100px ${bgHoverColor} `;
   const pageNavName = title?.replaceAll(" ", "").toLowerCase();
   return (
     <>
@@ -270,7 +268,7 @@ export default function Home() {
     <>
       <div ref={homeRef} className="flex justify-center">
         <nav
-          className="bg-[#f8f3f1] fixed sm:grid sm:grid-rows-1 sm:items-center sm:justify-items-stretch sm:h-12 top-0 w-screen z-10"
+          className="bg-[#161616] fixed sm:grid sm:grid-rows-1 sm:items-center sm:justify-items-stretch sm:h-12 top-0 w-screen z-10"
           data-headlessui-state=""
         >
           <div>
@@ -305,7 +303,7 @@ export default function Home() {
                 <div className=" sm:ml-2 sm:block">
                   <button
                     onClick={handleHomeClick}
-                    className="hidden sm:ml-2 sm:block bg-[#161616] text-[#f8f3f1] rounded-md px-3 py-2 text-sm font-medium"
+                    className="hidden sm:ml-2 sm:block bg-[#f8f3f1] text-[#161616] rounded-md px-3 py-2 text-sm font-medium"
                     aria-current="page"
                   >
                     home
@@ -314,17 +312,17 @@ export default function Home() {
                 <div className="hidden justify-self-end sm:mr-2 sm:block">
                   <button
                     onClick={handleProjectsClick}
-                    className="text-[#161616] hover:bg-[#161616] hover:text-[#f8f3f1] rounded-md px-3 py-2 text-sm font-medium"
+                    className="text-[#f8f3f1] hover:bg-[#f8f3f1] hover:text-[#161616] rounded-md px-3 py-2 text-sm font-medium"
                   >
                     projects
                   </button>
                   <button
                     onClick={handleCreativeClick}
-                    className="text-[#161616] hover:bg-[#161616] hover:text-[#f8f3f1] rounded-md px-3 py-2 text-sm font-medium"
+                    className="text-[#f8f3f1] hover:bg-[#f8f3f1] hover:text-[#161616] rounded-md px-3 py-2 text-sm font-medium"
                   >
                     creative
                   </button>
-                  <button className="text-[#161616] hover:bg-[#161616] hover:text-[#f8f3f1] rounded-md px-3 py-2 text-sm font-medium">
+                  <button className="text-[#f8f3f1] hover:bg-[#f8f3f1] hover:text-[#161616] rounded-md px-3 py-2 text-sm font-medium">
                     resume
                   </button>
                 </div>
@@ -334,35 +332,15 @@ export default function Home() {
         </nav>
       </div>
 
-      <div className="grid grid-cols-2 pr-[200px] justify-center pl-[200px]">
-        <div className="pt-[175px]">
-          <div className="font-[200] text-[25px] w-[450px] text-left">
-            i’m a senior at <b className="font-[600]">Princeton University</b>{" "}
-            studying
-            <b className="font-[600]">
-              {" "}
-              electrical & computer engineering
-            </b>{" "}
-            with minors in <b className="font-[600]">
-              {" "}
-              technology & society
-            </b>{" "}
-            and
-            <b className="font-[600]"> robotics</b>. i’m excited about building
-            valuable digital experiences that bring people together.{" "}
-          </div>
-          <div className="pt-[25px]">
-            <SocialButtons />
-          </div>
-        </div>
-        <div className="pt-[400px] ">
-          <div className="text-right font-black text-[45px]">
-            JAD <br /> BENDARKAWI
-          </div>
-          <div className="text-right font-extralight text-[25px]">
-            software engineer + ux + product
-          </div>
-        </div>
+      <div
+        ref={homeRef}
+        className="flex items-center justify-center pt-[172px]"
+      >
+        <Snail />
+      </div>
+
+      <div className="flex items-center justify-center pt-[172px]">
+        <NameGreeting />
       </div>
 
       <div className="pt-[290px] pb-[20px] justify-center flex ">

@@ -82,7 +82,7 @@ export default function page() {
     <>
       <div className="flex justify-center">
         <nav
-          className="bg-[#f8f3f1] fixed sm:grid sm:grid-rows-1 sm:items-center sm:justify-items-stretch sm:h-12 top-0 w-screen z-10"
+          className="bg-[#161616] fixed sm:grid sm:grid-rows-1 sm:items-center sm:justify-items-stretch sm:h-12 top-0 w-screen z-10"
           data-headlessui-state=""
         >
           <div>
@@ -91,7 +91,7 @@ export default function page() {
                 <div className=" sm:ml-2 sm:block">
                   <Link href="/">
                     <button
-                      className=" sm:ml-2 sm:block bg-[#161616] text-[#f8f3f1] rounded-md px-3 py-2 text-sm font-medium"
+                      className=" sm:ml-2 sm:block bg-[#f8f3f1] text-[#161616] rounded-md px-3 py-2 text-sm font-medium"
                       aria-current="page"
                     >
                       return home
