@@ -796,6 +796,9 @@ video {
 .pt-\[10px\] {
   padding-top: 10px;
 }
+.pt-\[120px\] {
+  padding-top: 120px;
+}
 .pt-\[12px\] {
   padding-top: 12px;
 }
@@ -823,17 +826,14 @@ video {
 .pt-\[8px\] {
   padding-top: 8px;
 }
-.pt-\[160px\] {
-  padding-top: 160px;
+.pt-\[145px\] {
+  padding-top: 145px;
 }
-.pt-\[140px\] {
-  padding-top: 140px;
+.pt-\[200px\] {
+  padding-top: 200px;
 }
-.pt-\[130px\] {
-  padding-top: 130px;
-}
-.pt-\[120px\] {
-  padding-top: 120px;
+.pt-\[300px\] {
+  padding-top: 300px;
 }
 .text-left {
   text-align: left;
@@ -866,6 +866,9 @@ video {
   font-size: 0.875rem;
   line-height: 1.25rem;
 }
+.font-\[100\] {
+  font-weight: 100;
+}
 .font-\[200\] {
   font-weight: 200;
 }
@@ -886,9 +889,6 @@ video {
 }
 .font-medium {
   font-weight: 500;
-}
-.font-\[100\] {
-  font-weight: 100;
 }
 .uppercase {
   text-transform: uppercase;
@@ -927,6 +927,10 @@ video {
 .text-violet-400 {
   --tw-text-opacity: 1;
   color: rgb(167 139 250 / var(--tw-text-opacity));
+}
+.text-\[\#618F81\] {
+  --tw-text-opacity: 1;
+  color: rgb(97 143 129 / var(--tw-text-opacity));
 }
 .no-underline {
   text-decoration-line: none;
@@ -983,23 +987,6 @@ video {
 body {
   color: #f8f3f1;
   background: #161616;
-}
-
-@keyframes bounce {
-
-  0%, 100% {
-    transform: translateY(-25%);
-    animation-timing-function: cubic-bezier(0.8,0,1,1);
-  }
-
-  50% {
-    transform: none;
-    animation-timing-function: cubic-bezier(0,0,0.2,1);
-  }
-}
-
-.hover\:animate-bounce:hover {
-  animation: bounce 1s infinite;
 }
 
 .hover\:cursor-pointer:hover {
@@ -1139,6 +1126,18 @@ body {
   .sm\:justify-items-stretch {
     justify-items: stretch;
   }
+
+  .sm\:pt-\[100px\] {
+    padding-top: 100px;
+  }
+
+  .sm\:pt-\[300px\] {
+    padding-top: 300px;
+  }
+
+  .sm\:pt-\[200px\] {
+    padding-top: 200px;
+  }
 }
 
 @media (min-width: 768px) {
@@ -1146,17 +1145,17 @@ body {
   .md\:grid-cols-1 {
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
+
+  .md\:pt-\[300px\] {
+    padding-top: 300px;
+  }
+
+  .md\:pt-\[200px\] {
+    padding-top: 200px;
+  }
 }
 
 @media (min-width: 1024px) {
-
-  .lg\:h-\[143px\] {
-    height: 143px;
-  }
-
-  .lg\:w-\[138px\] {
-    width: 138px;
-  }
 
   .lg\:w-\[923px\] {
     width: 923px;
@@ -1178,6 +1177,14 @@ body {
 
   .lg\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .lg\:pt-\[145px\] {
+    padding-top: 145px;
+  }
+
+  .lg\:pt-\[200px\] {
+    padding-top: 200px;
   }
 }
 
