@@ -352,12 +352,12 @@ export default function Home() {
             skills={["figma", "ux design", "product development"]}
           />
           <ProjectCard
-            title={"Robotic Art Installation"}
+            title={"Figure-8-Robot"}
             description={
-              "a project advised by the Self-Organizing Swarms & Robotics (SSR) Lab led by Radhika Nagpal "
+              "a self-driving, speed-controlled robot that can complete figure 8's (final project for ECE302: Robotics and Autonomous Systems Lab)"
             }
             bgHoverColor={`hover:bg-blue-500`}
-            skills={["C", "psoc creator", "circuit design", "pid control"]}
+            skills={["C", "computer vision", "circuit design", "PID ctrl"]}
           />
         </div>
       </div>
