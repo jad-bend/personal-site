@@ -1,3 +1,5 @@
 {
-  "/page": "app/page.js"
+  "/page": "app/page.js",
+  "/icon.png/route": "app/icon.png/route.js",
+  "/microsoftloop/page": "app/microsoftloop/page.js"
 }
