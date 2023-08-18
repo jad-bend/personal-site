@@ -6,55 +6,27 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 import Cursor from "./Cursor";
 
-function Snail() {
+function Icon() {
   return (
     <>
-      <div className="hover:animate-bounce lg:w-[138px] lg:h-[143px] lg:scale-100">
+      <div className="lg:scale-100">
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 138 143"
+          width="154"
+          height="230"
+          viewBox="0 0 154 230"
           fill="none"
         >
           <path
-            d="M47.1975 64.9834C37.6885 64.9834 26.8301 65.9101 17.828 62.2033C13.812 60.5497 6.84253 59.5251 6.84253 54.0427C6.84253 44.7582 12.5817 38.0961 19.3077 32.1613C28.9891 23.6189 42.9768 22.216 55.2685 26.2426C64.1446 29.1503 67.3749 36.0735 67.3749 44.8507C67.3749 61.1396 66.5678 77.3503 66.5678 93.6354C66.5678 101.896 67.5584 116.4 76.7462 119.463C85.5229 122.388 95.9549 122.508 105.129 122.287C114.824 122.054 122.176 112.797 128.625 106.549C135.603 99.7884 138.21 79.6632 133.736 70.5434C131.705 66.4022 126.048 61.9329 122.616 58.9749C116.872 54.023 109.09 49.822 101.452 49.6485C94.6485 49.4938 89.9352 48.8882 83.5618 52.4733C79.103 54.9814 76.0517 60.9023 73.4282 64.9834C69.4869 71.1142 69.6409 80.6043 70.7827 87.5821C71.7908 93.7425 73.2089 99.4375 78.2259 103.59C83.5427 107.99 91.321 107.37 97.8653 106.952C104.201 106.548 106.595 94.9455 106.878 90.1379C107.165 85.2645 103.711 82.1816 98.8518 81.9324C93.4946 81.6577 86.7453 79.1637 86.7453 86.775"
+            d="M78.8239 42.9764C72.4129 72.4217 67.23 102.049 61.8325 131.693C57.5656 155.127 53.3531 178.573 49.064 202.002C48.3819 205.728 47.6183 209.433 46.8126 213.134C46.6306 213.969 46.3507 217.718 45.3885 218.29C43.5195 219.402 41.3676 200.582 41.3453 199.891C40.7222 180.617 45.171 160.679 51.3979 142.55C57.7559 124.039 67.2912 103.86 82.002 90.4574C88.4151 84.6146 99.6195 76.4678 108.809 81.0132C115.789 84.4662 115.424 93.2996 113.622 99.7308C110.251 111.763 100.909 121.136 90.9316 128.128C88.3828 129.915 85.6911 131.495 82.8587 132.784C82.842 132.792 78.4131 134.662 78.4079 134.247C78.3979 133.442 81.9552 131.453 82.1408 131.337C86.862 128.367 91.903 125.851 97.1407 123.927C101.823 122.208 112.314 118.518 116.768 122.842C118.687 124.704 119.031 127.773 118.869 130.294C118.421 137.287 115.084 144.135 111.138 149.789C103.477 160.766 90.9351 171.278 77.293 173.175C73.3098 173.729 69.135 173.491 65.381 171.937C62.2312 170.633 61.169 168.724 59.3573 166.192"
             stroke="white"
-            stroke-width="2.4"
+            stroke-width="0.49152"
             stroke-linecap="round"
           />
           <path
-            d="M18.142 64.9833C18.142 71.0301 18.0546 77.9819 15.2723 83.5466C12.5676 88.956 8.34088 93.1575 6.21483 98.8815C2.27114 109.499 3.78896 120.041 11.6852 127.937C29.0355 145.287 62.1315 145.153 81.9028 131.973"
+            d="M0.999777 60.288C3.97425 58.6743 7.32968 57.6501 10.5323 56.6386C26.6033 51.5629 43.0149 47.4052 59.4495 43.7008C90.4076 36.7229 121.592 32.6406 153.195 30.2788"
             stroke="white"
-            stroke-width="2.4"
-            stroke-linecap="round"
-          />
-          <path
-            d="M28.6342 39.1562C30.1603 39.1562 32.7853 38.5803 33.4767 39.9633"
-            stroke="white"
-            stroke-width="2.4"
-            stroke-linecap="round"
-          />
-          <path
-            d="M46.3904 39.9633H54.4614"
-            stroke="white"
-            stroke-width="2.4"
-            stroke-linecap="round"
-          />
-          <path
-            d="M29.4414 45.613C32.8646 45.613 36.9902 46.2776 39.9337 44.8059"
-            stroke="white"
-            stroke-width="2.4"
-            stroke-linecap="round"
-          />
-          <path
-            d="M35.8981 23.0142C35.8981 17.2244 37.1495 9.82755 32.6697 5.34772C28.0262 0.704225 19.2502 1.3647 14.1064 4.45095"
-            stroke="white"
-            stroke-width="2.4"
-            stroke-linecap="round"
-          />
-          <path
-            d="M28.6343 21.4C25.9198 18.0069 25.2779 12.9054 21.3704 10.28C17.7101 7.82074 10.7299 7.3576 6.6184 8.66579C4.18596 9.43975 3.09566 12.9345 2 14.9432"
-            stroke="white"
-            stroke-width="2.4"
+            stroke-width="0.49152"
             stroke-linecap="round"
           />
         </svg>
@@ -70,7 +42,7 @@ function NameGreeting() {
         <div className="font-black text-center text-[45px] ">
           Hello! I'm Jad Bendarkawi
         </div>
-        <div className="font-[200] text-[25px] text-center">
+        <div className="text-[25px] text-center font-[100]">
           software engineer + ux + product
         </div>
         <div className="font-[200] text-[25px] lg:w-[963px] text-center pt-[22px] text-[#f8f3f1]">
@@ -233,7 +205,7 @@ function ProjectCard({
         <div className={projectCardStyles}>
           <div className="pl-7">
             <div
-              className="text-[#f8f3f1] font-black text-[30px] mb-[5px] pt-7 bg-left-bottom bg-gradient-to-r from-black to-black bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out "
+              className="text-[#f8f3f1] font-black text-[30px] mb-[5px] pt-7 bg-left-bottom bg-gradient-to-r from-black to-black bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out"
               style={{ width: "fit-content" }}
             >
               {title}
@@ -338,8 +310,8 @@ export default function Home() {
         </nav>
       </div>
 
-      <div className="flex items-center justify-center pt-[172px]">
-        <Snail />
+      <div className="flex items-center justify-center pt-[120px]">
+        <Icon />
       </div>
 
       <div className="flex items-center justify-center pt-[172px]">
