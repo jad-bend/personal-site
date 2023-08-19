@@ -83,7 +83,7 @@ export default function page() {
     <>
       <div className="flex justify-center">
         <nav
-          className="bg-[#161616] fixed sm:grid sm:grid-rows-1 sm:items-center sm:justify-items-stretch sm:h-12 top-0 w-screen z-10"
+          className="bg-[#ffffff0a] fixed sm:grid sm:grid-rows-1 sm:items-center sm:justify-items-stretch sm:h-12 top-0 w-screen z-10 backdrop-blur-lg"
           data-headlessui-state=""
         >
           <div>
