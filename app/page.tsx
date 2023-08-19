@@ -1,11 +1,7 @@
 "use client";
 
-import { MouseEventHandler, useRef, useState } from "react";
-import Spline from "@splinetool/react-spline";
-import { useRouter } from "next/router";
+import { MouseEventHandler, useRef } from "react";
 import Link from "next/link";
-import Cursor from "./Cursor";
-import icon from "./icon.png";
 
 function Aura() {
   return (
@@ -172,36 +168,36 @@ function NameGreeting() {
         </div>
         <div className="justify-center flex mt-[25px]">
           <a
-            className="group bg-transparent h-[50px] w-[50px] rounded-[50px] mr-3 justify-center flex pt-[12px] transition ease-in-out duration-300 hover:bg-white"
+            className="group bg-transparent h-[50px] w-[50px] rounded-[50px] mr-3 justify-center flex pt-[12px] hover:bg-white"
             href="https://www.linkedin.com/in/jadbendarkawi/"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5 fill-[#f8f3f1] transition ease-in-out duration-300 group-hover:fill-[#161616]"
+              className="h-5 w-5 fill-[#f8f3f1]  group-hover:fill-[#161616]"
               viewBox="0 0 24 24"
             >
               <path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" />
             </svg>
           </a>
           <a
-            className="group bg-transparent h-[50px] w-[50px] rounded-[50px] mr-3 justify-center flex pt-[8px] transition ease-in-out duration-300 hover:bg-white"
+            className="group bg-transparent h-[50px] w-[50px] rounded-[50px] mr-3 justify-center flex pt-[8px]  hover:bg-white"
             href="https://github.com/jad-bend"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-8 w-8 fill-[#f8f3f1] transition ease-in-out duration-300 group-hover:fill-[#161616]"
+              className="h-8 w-8 fill-[#f8f3f1]  group-hover:fill-[#161616]"
               viewBox="0 0 24 24"
             >
               <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
             </svg>
           </a>
           <a
-            className="group bg-transparent h-[50px] w-[50px] rounded-[50px] mr-3 justify-center flex pt-[10px] transition ease-in-out duration-300 hover:bg-white"
+            className="group bg-transparent h-[50px] w-[50px] rounded-[50px] mr-3 justify-center flex pt-[10px] hover:bg-white"
             href="mailto:jadb@princeton.edu"
           >
             <svg
               viewBox="0 0 8 6"
-              className="h-7 w-7 rounded-[5px] fill-[#f8f3f1] transition ease-in-out duration-300 group-hover:fill-[#161616]"
+              className="h-7 w-7 rounded-[5px] fill-[#f8f3f1]  group-hover:fill-[#161616]"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path d="m0 0h8v6h-8zm.75 .75v4.5h6.5v-4.5zM0 0l4 3 4-3v1l-4 3-4-3z" />
@@ -213,49 +209,7 @@ function NameGreeting() {
   );
 }
 
-function SocialButtons() {
-  return (
-    <div className="justify-left flex">
-      <a
-        className="group h-[50px] w-[50px] rounded-[50px] mr-[20px] justify-center flex pt-[12px] transition ease-in-out duration-300 bg-[#161616]"
-        href="https://www.linkedin.com/in/jadbendarkawi/"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="h-5 w-5 fill-[#f8f3f1] transition ease-in-out duration-300"
-          viewBox="0 0 24 24"
-        >
-          <path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" />
-        </svg>
-      </a>
-      <a
-        className="group h-[50px] w-[50px] rounded-[50px] mr-[20px] justify-center flex pt-[8px] transition ease-in-out duration-300 bg-[#161616]"
-        href="https://github.com/jad-bend"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="h-8 w-8 transition ease-in-out duration-300 fill-[#f8f3f1]"
-          viewBox="0 0 24 24"
-        >
-          <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-        </svg>
-      </a>
-      <a
-        className="group h-[50px] w-[50px] rounded-[50px] mr-3 justify-center flex pt-[10px] transition ease-in-out duration-300 bg-[#161616]"
-        href="mailto:jadb@princeton.edu"
-      >
-        <svg
-          viewBox="0 0 8 6"
-          className="h-7 w-7 rounded-[5px] transition ease-in-out duration-300 fill-[#f8f3f1]"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path d="m0 0h8v6h-8zm.75 .75v4.5h6.5v-4.5zM0 0l4 3 4-3v1l-4 3-4-3z" />
-        </svg>
-      </a>
-    </div>
-  );
-}
-
+/*
 function HomeRender() {
   return (
     <div className="z-0 absolute">
@@ -263,6 +217,7 @@ function HomeRender() {
     </div>
   );
 }
+*/
 
 interface SectionHeaderProps {
   title: string;
@@ -300,6 +255,7 @@ interface ProjectCardProps {
   onNavigate?: MouseEventHandler<HTMLDivElement>;
   bgHoverColor?: string;
   skills?: string[];
+  image?: string;
 }
 
 function ProjectCard({
@@ -307,16 +263,17 @@ function ProjectCard({
   description,
   bgHoverColor,
   skills,
+  image,
 }: ProjectCardProps) {
-  const projectCardStyles = `group bg-[#242424] w-[550px] h-[209px] rounded-[10px] transition-all duration-200 ease-in no-underline hover:cursor-pointer hover:w-100px ${bgHoverColor} `;
+  const projectCardStyles = `scale-95 hover:scale-100 group bg-[#242424] w-[550px] h-[616px] rounded-[50px] transition-all duration-200 ease-in no-underline hover:cursor-pointer hover:w-100px ${bgHoverColor} relative`;
   const pageNavName = title?.replaceAll(" ", "").toLowerCase();
   return (
     <>
       <Link href={pageNavName}>
         <div className={projectCardStyles}>
-          <div className="pl-7">
+          <div className="pl-7 scale">
             <div
-              className="text-[#f8f3f1] font-black text-[30px] mb-[5px] pt-7 bg-left-bottom bg-gradient-to-r from-black to-black bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out"
+              className="text-[#f8f3f1] font-black text-[30px] mb-[10px] pt-[40px] bg-left-bottom bg-gradient-to-r from-black to-black bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out"
               style={{ width: "fit-content" }}
             >
               {title}
@@ -332,6 +289,10 @@ function ProjectCard({
               return <SkillChip text={skill} />;
             })}
           </div>
+
+          <div className="bottom-0 right-0 absolute opacity-50 group-hover:opacity-100 ">
+            <img src={image} width="393" height="398" />
+          </div>
         </div>
       </Link>
     </>
@@ -344,7 +305,7 @@ export function Footer() {
       <div className="w-full max-w-screen-xl mx-auto p-4 md:py-8">
         <div className="sm:flex sm:items-center sm:justify-between">
           <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-            <img src="icon.png" height="50px" width="50px"></img>
+            <img src="/icon.png" height="50px" width="50px"></img>
           </span>
 
           <ul className="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
@@ -478,44 +439,30 @@ export default function Home() {
 
       <div
         ref={projectsRef}
-        className="pt-[290px] pb-[20px] justify-center flex "
+        className="pt-[290px] pb-[50px] justify-center flex "
       >
         <SectionHeader title="featured projects" />
       </div>
 
       <div className="flex items-center justify-center">
-        <div className="grid gap-[10px] lg:grid-cols-2 md:grid-cols-1 ">
+        <div className="grid gap-[40px] lg:grid-cols-2 md:grid-cols-1 ">
           <ProjectCard
             title={"Microsoft Loop"}
             description={
               "digital expressions + homepage experience for the Microsoft Loop app, designed to enable live, collaborative productivity"
             }
-            bgHoverColor={"hover:bg-violet-400"}
+            bgHoverColor={"hover:bg-[#9B79E2]"}
             skills={["react", "typescript", "ux design", "html/css"]}
+            image={"/loopcard.png"}
           />
           <ProjectCard
             title={"TigerFocus"}
             description={
               "a pomodoro inspired self-study tool that enables Princeton students to track tasks, time sessions, and manage courses all in one place"
             }
-            bgHoverColor={"hover:bg-orange-400"}
+            bgHoverColor={"hover:bg-[#E29C79]"}
             skills={["python flask", "javascript", "html/css", "figma"]}
-          />
-          <ProjectCard
-            title={"halalify"}
-            description={
-              "a lightweight chrome extension built to help Muslims make informed online grocery shopping decisions"
-            }
-            bgHoverColor={`hover:bg-emerald-400`}
-            skills={["figma", "ux design", "product development"]}
-          />
-          <ProjectCard
-            title={"Figure-8-Robot"}
-            description={
-              "a self-driving, speed-controlled robot that can complete figure 8's (final project for ECE302: Robotics and Autonomous Systems Lab)"
-            }
-            bgHoverColor={`hover:bg-blue-400`}
-            skills={["C", "computer vision", "circuit design", "PID ctrl"]}
+            image={"/tigercard.png"}
           />
         </div>
       </div>
