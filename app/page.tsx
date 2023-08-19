@@ -5,6 +5,7 @@ import Spline from "@splinetool/react-spline";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import Cursor from "./Cursor";
+import icon from "./icon.png";
 
 function Icon() {
   return (
@@ -50,15 +51,15 @@ function NameGreeting() {
         </div>
         <div className="font-[200] text-[25px] lg:w-[963px] text-center pt-[22px] text-[#f8f3f1]">
           i’m a senior at{" "}
-          <b className="font-[600] text-orange-300">Princeton University</b>{" "}
+          <b className="font-[600] text-[#618F81]">Princeton University</b>{" "}
           studying
-          <b className="font-[600] text-indigo-300">
+          <b className="font-[600] text-[#618F81]">
             {" "}
             electrical & computer engineering
           </b>{" "}
           with minors in{" "}
-          <b className="font-[600] text-blue-300"> technology & society</b> and
-          <b className="font-[600] text-emerald-300"> robotics</b>. i’m excited
+          <b className="font-[600] text-[#618F81]"> technology & society</b> and
+          <b className="font-[600] text-[#618F81]"> robotics</b>. i’m excited
           about building valuable digital experiences that bring people
           together.{" "}
         </div>
@@ -208,7 +209,7 @@ function ProjectCard({
         <div className={projectCardStyles}>
           <div className="pl-7">
             <div
-              className="text-[#f8f3f1] font-black text-[30px] mb-[5px] pt-7 bg-left-bottom bg-gradient-to-r from-black to-black bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out"
+              className="text-[#f8f3f1] group-hover:text-[#161616] font-black text-[30px] mb-[5px] pt-7 bg-left-bottom bg-gradient-to-r from-black to-black bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out"
               style={{ width: "fit-content" }}
             >
               {title}
@@ -227,6 +228,52 @@ function ProjectCard({
         </div>
       </Link>
     </>
+  );
+}
+
+export function Footer() {
+  return (
+    <footer className="  m-4">
+      <div className="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+        <div className="sm:flex sm:items-center sm:justify-between">
+          <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
+            <img src="/icon.png" height="50px" width="50px"></img>
+          </span>
+
+          <ul className="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
+            <li>
+              <a
+                href="https://www.linkedin.com/in/jadbendarkawi/"
+                className="mr-4 hover:underline md:mr-6"
+              >
+                linkedin
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://github.com/jad-bend"
+                className="mr-4 hover:underline md:mr-6 "
+              >
+                github
+              </a>
+            </li>
+            <li>
+              <a href="mailto:jadb@princeton.edu" className="hover:underline">
+                email
+              </a>
+            </li>
+          </ul>
+        </div>
+        <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+        <span className="block text-sm text-gray-500 sm:text-center dark:text-gray-400">
+          © 2023{" "}
+          <a href="https://flowbite.com/" className="hover:underline">
+            jad bendarkawi
+          </a>
+          . All Rights Reserved.
+        </span>
+      </div>
+    </footer>
   );
 }
 
@@ -284,7 +331,7 @@ export default function Home() {
                 <div className=" sm:ml-2 sm:block">
                   <button
                     onClick={handleHomeClick}
-                    className="hidden sm:ml-2 sm:block bg-[#f8f3f1] text-[#161616] rounded-md px-3 py-2 text-sm font-medium"
+                    className="hidden sm:ml-2 sm:block bg-[#618F81] text-[#f8f3f1]  rounded-md px-3 py-2 text-sm font-medium"
                     aria-current="page"
                   >
                     home
@@ -293,17 +340,17 @@ export default function Home() {
                 <div className="hidden justify-self-end sm:mr-2 sm:block">
                   <button
                     onClick={handleProjectsClick}
-                    className="text-[#f8f3f1] hover:bg-[#f8f3f1] hover:text-[#161616] rounded-md px-3 py-2 text-sm font-medium"
+                    className="text-[#f8f3f1] hover:bg-[#618F81]  rounded-md px-3 py-2 text-sm font-medium"
                   >
                     projects
                   </button>
                   <button
                     onClick={handleCreativeClick}
-                    className="text-[#f8f3f1] hover:bg-[#f8f3f1] hover:text-[#161616] rounded-md px-3 py-2 text-sm font-medium"
+                    className="text-[#f8f3f1] hover:bg-[#618F81]  rounded-md px-3 py-2 text-sm font-medium"
                   >
                     creative
                   </button>
-                  <button className="text-[#f8f3f1] hover:bg-[#f8f3f1] hover:text-[#161616] rounded-md px-3 py-2 text-sm font-medium">
+                  <button className="text-[#f8f3f1] hover:bg-[#618F81] rounded-md px-3 py-2 text-sm font-medium">
                     resume
                   </button>
                 </div>
@@ -332,7 +379,7 @@ export default function Home() {
             description={
               "digital expressions + homepage experience for the Microsoft Loop app, designed to enable live, collaborative productivity"
             }
-            bgHoverColor={"hover:bg-violet-500"}
+            bgHoverColor={"hover:bg-violet-400"}
             skills={["react", "typescript", "ux design", "html/css"]}
           />
           <ProjectCard
@@ -340,7 +387,7 @@ export default function Home() {
             description={
               "a pomodoro inspired self-study tool that enables Princeton students to track tasks, time sessions, and manage courses all in one place"
             }
-            bgHoverColor={"hover:bg-orange-500"}
+            bgHoverColor={"hover:bg-orange-400"}
             skills={["python flask", "javascript", "html/css", "figma"]}
           />
           <ProjectCard
@@ -348,7 +395,7 @@ export default function Home() {
             description={
               "a lightweight chrome extension built to help Muslims make informed online grocery shopping decisions"
             }
-            bgHoverColor={`hover:bg-emerald-500`}
+            bgHoverColor={`hover:bg-emerald-400`}
             skills={["figma", "ux design", "product development"]}
           />
           <ProjectCard
@@ -356,7 +403,7 @@ export default function Home() {
             description={
               "a self-driving, speed-controlled robot that can complete figure 8's (final project for ECE302: Robotics and Autonomous Systems Lab)"
             }
-            bgHoverColor={`hover:bg-blue-500`}
+            bgHoverColor={`hover:bg-blue-400`}
             skills={["C", "computer vision", "circuit design", "PID ctrl"]}
           />
         </div>
@@ -366,8 +413,10 @@ export default function Home() {
         ref={creativeRef}
         className="pt-[100px] pb-[20px] justify-center flex "
       >
-        <SectionHeader title="creative stuff" />
+        <SectionHeader title="" />
       </div>
+
+      <Footer />
     </>
   );
 }

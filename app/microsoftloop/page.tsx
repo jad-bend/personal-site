@@ -1,6 +1,7 @@
 import Image from "next/image";
 import screenshot from "./loop.png";
 import Link from "next/link";
+import { Footer } from "../page";
 
 function ProjectIntro() {
   return (
@@ -30,8 +31,8 @@ function ProjectIntro() {
 function ProjectTakeaways() {
   return (
     <>
-      <div className="font-light text-[30px] pt-[50px]">
-        KEY PROJECT TAKEAWAYS
+      <div className="font-bold text-[30px] pt-[50px]">
+        key takeaways + contributions
       </div>
       <div className="justify-center flex pt-[30px]">
         <div className="grid lg:grid-cols-3 sm:grid-cols-1 gap-[80px]">
@@ -91,7 +92,7 @@ export default function page() {
                 <div className=" sm:ml-2 sm:block">
                   <Link href="/">
                     <button
-                      className=" sm:ml-2 sm:block bg-[#f8f3f1] text-[#161616] rounded-md px-3 py-2 text-sm font-medium"
+                      className=" sm:ml-2 sm:block bg-[#618F81] text-[#f8f3f1] rounded-md px-3 py-2 text-sm font-medium"
                       aria-current="page"
                     >
                       return home
@@ -117,6 +118,10 @@ export default function page() {
       <div className="text-center pt-[50px]">
         <ProjectIntro />
         <ProjectTakeaways />
+      </div>
+
+      <div className="pt-[100px]">
+        <Footer />
       </div>
     </>
   );
