@@ -1,7 +1,10 @@
+"use client";
+
 import Image from "next/image";
 import screenshot from "./loop.png";
 import Link from "next/link";
 import { Footer } from "../page";
+import { motion } from "framer-motion";
 
 function ProjectIntro() {
   return (
@@ -105,20 +108,26 @@ export default function page() {
         </nav>
       </div>
 
-      <div className="justify-center flex pt-[100px]">
-        <Image
-          src={screenshot}
-          width={1000}
-          height={500}
-          alt="loop app workspace"
-          className="rounded-[20px]"
-        />
-      </div>
+      <motion.div
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ ease: "easeOut", duration: 0.75 }}
+      >
+        <div className="justify-center flex pt-[100px]">
+          <Image
+            src={screenshot}
+            width={1000}
+            height={500}
+            alt="loop app workspace"
+            className="rounded-[20px]"
+          />
+        </div>
 
-      <div className="text-center pt-[50px]">
-        <ProjectIntro />
-        <ProjectTakeaways />
-      </div>
+        <div className="text-center pt-[50px]">
+          <ProjectIntro />
+          <ProjectTakeaways />
+        </div>
+      </motion.div>
 
       <div className="pt-[100px]">
         <Footer />
