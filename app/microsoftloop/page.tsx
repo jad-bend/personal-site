@@ -3,8 +3,8 @@
 import Image from "next/image";
 import screenshot from "./loop.png";
 import Link from "next/link";
-import { Footer } from "../page";
 import { motion } from "framer-motion";
+import Footer from "../Footer";
 
 function ProjectIntro() {
   return (

@@ -5,8 +5,8 @@ import screenshot from "./tigerf.png";
 import colors from "./test2.png";
 import screens from "./screens.png";
 import Link from "next/link";
-import { Footer } from "../page";
 import { motion } from "framer-motion";
+import Footer from "../Footer";
 
 function ProjectIntro() {
   return (
