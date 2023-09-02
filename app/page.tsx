@@ -360,7 +360,7 @@ function ProjectCard({
   skills,
   image,
 }: ProjectCardProps) {
-  const projectCardStyles = `scale-95 hover:scale-100 group bg-[#242424] w-[550px] h-[616px] rounded-[50px] transition-all duration-200 ease-in no-underline hover:cursor-pointer hover:w-100px ${bgHoverColor} relative`;
+  const projectCardStyles = `scale-95 hover:scale-[97%] hover:shadow-lg group bg-[#242424] w-[550px] h-[616px] rounded-[50px] transition-all duration-200 ease-in no-underline hover:cursor-pointer hover:w-100px ${bgHoverColor} relative`;
   const pageNavName = title?.replaceAll(" ", "").toLowerCase();
   return (
     <>
@@ -491,14 +491,22 @@ export default function Home() {
         <NameGreeting />
       </motion.div>
 
-      <div
+      <motion.div
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ ease: "easeOut", duration: 0.75, delay: 0.5 }}
         ref={projectsRef}
         className="pt-[290px] pb-[50px] justify-center flex "
       >
         <SectionHeader title="featured projects" />
-      </div>
+      </motion.div>
 
-      <div className="flex items-center justify-center">
+      <motion.div
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ ease: "easeOut", duration: 0.75, delay: 0.75 }}
+        className="flex items-center justify-center"
+      >
         <div className="grid gap-[40px] lg:grid-cols-2 md:grid-cols-1 ">
           <ProjectCard
             title={"Microsoft Loop"}
@@ -519,7 +527,7 @@ export default function Home() {
             image={"/tigercard.png"}
           />
         </div>
-      </div>
+      </motion.div>
 
       <div
         ref={creativeRef}
