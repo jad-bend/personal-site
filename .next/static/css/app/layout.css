@@ -1272,6 +1272,10 @@ body {
     width: 963px;
   }
 
+  .lg\:w-screen {
+    width: 100vw;
+  }
+
   .lg\:scale-100 {
     --tw-scale-x: 1;
     --tw-scale-y: 1;

@@ -13,7 +13,7 @@ function Aura() {
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ ease: "easeOut", duration: 1 }}
-        className="absolute z-[-999] opacity-90"
+        className="absolute z-[-999] opacity-90 "
       >
         <svg
           width="1440"
@@ -21,6 +21,7 @@ function Aura() {
           viewBox="0 0 1440 1118"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
+          className="lg:w-screen"
         >
           <g opacity="0.9" filter="url(#filter0_f_182_339)">
             <path
