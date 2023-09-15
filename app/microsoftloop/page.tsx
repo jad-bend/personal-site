@@ -5,6 +5,7 @@ import screenshot from "./loop.png";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import Footer from "../Footer";
+import { TwitterTweetEmbed } from "react-twitter-embed";
 
 function ProjectIntro() {
   return (
@@ -127,9 +128,21 @@ export default function page() {
           <ProjectIntro />
           <ProjectTakeaways />
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ ease: "easeOut", duration: 1.5 }}
+          className="pt-[80px]"
+        >
+          <TwitterTweetEmbed
+            tweetId={"1699501035985809614"}
+            options={{ conversation: "none", align: "center" }}
+          />
+        </motion.div>
       </motion.div>
 
-      <div className="pt-[100px]">
+      <div className="pt-[80px]">
         <Footer />
       </div>
     </>
