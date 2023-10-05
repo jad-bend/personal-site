@@ -133,7 +133,7 @@ export default function page() {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ ease: "easeOut", duration: 1.5 }}
-          className="pt-[80px]"
+          className="pt-[80px] justify-center flex"
         >
           <TwitterTweetEmbed
             tweetId={"1699501035985809614"}
