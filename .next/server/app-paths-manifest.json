@@ -1,4 +1,4 @@
 {
-  "/icon.png/route": "app/icon.png/route.js",
-  "/microsoftloop/page": "app/microsoftloop/page.js"
+  "/page": "app/page.js",
+  "/tigerfocus/page": "app/tigerfocus/page.js"
 }
